@@ -176,7 +176,7 @@ export const forgotPassword = async(req,res) => {
            from: process.env.MAIL_ID,
            to: foundUser.email,
            subject: 'Password Reset link sent',
-           text: `Greetings from Bookish! Click on the below link to reset your password. 
+           text: `Greetings from Thinnai! Click on the below link to reset your password. 
            This link is valid for 15 minutes after which link will be invalid. ${link}`
          };   
  
