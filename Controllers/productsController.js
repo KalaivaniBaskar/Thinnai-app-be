@@ -8,8 +8,10 @@ export const handleAddProduct = async(req, res) => {
     try{
 
         //console.log(req.body);
-        const id = nanoid(7);
+        const id = nanoid();
         const product_ID = "PD-" + id
+       // const id = Math.random().toString(36).substring(2,9);
+        console.log("add new prod",id)
         console.log("handle add prod") 
         const newProduct = new Product({...req.body, product_ID})
         const result = await newProduct.save();
